@@ -1,0 +1,23 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+.uv/
+
+# ROS2 build artifacts
+install/
+log/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment files with credentials
+.env
+.env.*
+!.env.example

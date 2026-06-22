@@ -1,0 +1,58 @@
+[project]
+name = "robotcloudapi"
+version = "0.1.0"
+description = "Robot Cloud API server for FleetWeave"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "redis",
+  "paho-mqtt",
+  "pypandoc>=1.13",
+  "eclipse-zenoh"
+]
+
+[tool.uv]
+package = true
+
+[project.scripts]
+robot-api = "uvicorn:main"
+robot-api-dev = "uvicorn:main"
+gateway = "robotcloudapi.gateway.main:main"
+zenoh-gateway = "robotcloudapi.gateway.zenoh.main:main"
+
+[project.optional-dependencies]
+server = ["uvicorn[standard]>=0.24.0"]
+test = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "httpx>=0.25.0",
+    "fakeredis>=2.20.0",
+    "pytest-mock>=3.12.0"
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "httpx>=0.25.0",
+    "fakeredis>=2.20.0",
+    "pytest-mock>=3.12.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.7.0"
+]
+
+
+[tool.coverage.run]
+source = ["src/robotcloudapi"]
+omit = ["tests/*", "src/robotcloudapi/__pycache__/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError"
+]

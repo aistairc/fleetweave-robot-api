@@ -1,0 +1,5 @@
+int8 order_type
+---
+bool response
+int8 order_type
+int8 response_code

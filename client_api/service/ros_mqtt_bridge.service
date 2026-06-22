@@ -1,0 +1,11 @@
+[Unit]
+Description=start ROS2 MQTT Bridge Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/mqttbridge.sh
+Restart=on-always
+
+[Install]
+WantedBy=multi-user.target

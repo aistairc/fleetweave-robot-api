@@ -1,0 +1,6 @@
+string id
+---
+string id
+int8 response_code
+---
+int8 status

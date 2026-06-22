@@ -1,0 +1,7 @@
+string id
+bool un_skip
+---
+string id
+int8 response_code
+---
+int8 status

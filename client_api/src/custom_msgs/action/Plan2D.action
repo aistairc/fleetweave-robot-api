@@ -1,0 +1,9 @@
+string id
+int8 move_point_list
+---
+string id
+int8 response_code
+---
+int8 status
+int8 move_pont
+int8 plan_status

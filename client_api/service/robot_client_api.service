@@ -1,0 +1,11 @@
+[Unit]
+Description=start Robot Client API Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/robot_client.sh
+Restart=on-always
+
+[Install]
+WantedBy=multi-user.target

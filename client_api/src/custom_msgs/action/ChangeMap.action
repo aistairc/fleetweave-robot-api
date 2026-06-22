@@ -1,0 +1,6 @@
+int8 map_id
+---
+int8 map_id
+int8 response_code
+---
+int8 status
