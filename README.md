@@ -48,7 +48,7 @@ fleetweave-robot-api/
 └── client_api/         # ROS2 workspace
     ├── bash/           # Startup scripts
     ├── service/        # systemd service files
-    ├── solid_params.aws.yaml   # MQTT bridge config
+    ├── robot_params.aws.yaml   # MQTT bridge config
     └── src/
         ├── custom_msgs/        # ROS2 message definitions
         ├── py_launch/          # Launch file
